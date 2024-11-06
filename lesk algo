@@ -1,0 +1,9 @@
+from nltk.wsd import lesk
+from nltk.tokenize import word_tokenize
+
+sentence = "I went to the bank to deposit some money."
+ambiguous_word = "bank"
+
+synset = lesk(word_tokenize(sentence), ambiguous_word)
+print("Ambiguous Word:", ambiguous_word)
+print("Sense:", synset)
